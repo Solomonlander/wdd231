@@ -26,54 +26,64 @@
 
 <body>
     <header>
-        <img src="images/logo.svg" alt="Site Logo">
-        <span>Solomon Lander</span>
-        <button id="menu"></button>
+        <div class="branding">
+            <img src="images/logo.svg" alt="Site Logo">
+            <span class="site-name">Site Name</span>
+        </div>
+        <button id="menu" aria-label="Menu"></button>
     </header>
 
     <nav>
         <ul class="navigation">
             <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">Final</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
         </ul>
     </nav>
 
     <main>
         <h1>Home</h1>
 
-        <section>
-            <h2>About Me</h2>
-            <p>I am a Web and Computer Programming student studying front-end development.</p>
+        <!-- ABOUT ME + PHOTO -->
+        <section class="about">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I am a Web and Computer Programming student with a strong interest in front-end
+                    development and user-centered design.
+                </p>
+            </div>
+
+            <div class="about-image">
+                <h2>Student Photo</h2>
+                <img src="images/lander2.webp" alt="Student photo">
+            </div>
         </section>
 
-        <section>
-            <h2>Web and Computer Programming</h2>
+        <!-- WEB CERTIFICATE COURSES -->
+        <section class="courses-section">
+            <h2>Web Certificate Courses</h2>
 
             <div class="filters">
                 <button onclick="filterCourses('all')">All</button>
-                <button onclick="filterCourses('WDD')">WDD</button>
                 <button onclick="filterCourses('CSE')">CSE</button>
+                <button onclick="filterCourses('WDD')">WDD</button>
             </div>
 
             <div id="courses"></div>
 
-            <p>Total Credits: <span id="totalCredits"></span></p>
-        </section>
-
-        <section>
-            <h2>Resources</h2>
-            <ul>
-                <li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
-                <li><a href="https://w3schools.com">W3Schools</a></li>
-            </ul>
+            <p class="credits">
+                The total credits for course listed above is
+                <span id="totalCredits"></span>
+            </p>
         </section>
     </main>
 
     <footer>
         <div class="social">
-            <a href="https://github.com/yourgithubusername">GitHub</a>
-            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://linkedin.com" aria-label="LinkedIn">in</a>
+            <a href="https://github.com" aria-label="GitHub">GitHub</a>
+            <a href="https://x.com" aria-label="X">X</a>
         </div>
 
         <p>© <span id="year"></span> Solomon Lander | Nigeria</p>

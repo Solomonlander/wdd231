@@ -8,10 +8,10 @@ const courses = [
 const courseContainer = document.getElementById("courses");
 const creditDisplay = document.getElementById("totalCredits");
 
-function displayCourses(courseList) {
+function displayCourses(list) {
     courseContainer.innerHTML = "";
 
-    courseList.forEach(course => {
+    list.forEach(course => {
         const div = document.createElement("div");
         div.classList.add("course");
         if (course.completed) div.classList.add("completed");
@@ -19,15 +19,15 @@ function displayCourses(courseList) {
         courseContainer.appendChild(div);
     });
 
-    const total = courseList.reduce((sum, c) => sum + c.credits, 0);
-    creditDisplay.textContent = total;
+    const totalCredits = list.reduce((sum, course) => sum + course.credits, 0);
+    creditDisplay.textContent = totalCredits;
 }
 
 function filterCourses(type) {
     if (type === "all") {
         displayCourses(courses);
     } else {
-        displayCourses(courses.filter(c => c.code.startsWith(type)));
+        displayCourses(courses.filter(course => course.code.startsWith(type)));
     }
 }
 

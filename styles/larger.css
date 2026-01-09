@@ -13,12 +13,17 @@
         margin: 0 1rem;
     }
 
-    main {
-        max-width: 900px;
-        margin: auto;
+    .about {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
     }
 
     #courses {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    main {
+        max-width: 1000px;
+        margin: auto;
     }
 }

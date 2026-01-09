@@ -1,34 +1,37 @@
 body {
     font-family: "Roboto", sans-serif;
-    margin: 0;
 }
 
 header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background: #1f2933;
+    background: #111827;
     color: white;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 header img {
     width: 40px;
-    margin-right: 1rem;
 }
 
 #menu {
-    margin-left: auto;
     background: none;
     border: none;
-    font-size: 1.5rem;
     color: white;
+    font-size: 1.5rem;
 }
 
 .navigation {
     display: none;
     list-style: none;
-    padding: 0;
-    background: #374151;
+    background: #1f2933;
 }
 
 .navigation.open {
@@ -44,15 +47,31 @@ header img {
 
 .navigation a:hover,
 .navigation a.active {
-    background: #4b5563;
+    background: #374151;
 }
 
 main {
     padding: 1rem;
 }
 
-.filters button {
-    margin: 0.25rem;
+.about {
+    display: grid;
+    gap: 1rem;
+}
+
+.about-image img {
+    background: #d1d5db;
+}
+
+.courses-section {
+    margin-top: 2rem;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 #courses {
@@ -61,18 +80,32 @@ main {
 }
 
 .course {
-    padding: 0.75rem;
     background: #e5e7eb;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: bold;
 }
 
 .course.completed {
     background: #bbf7d0;
-    border-left: 6px solid green;
+    border-left: 6px solid #15803d;
+}
+
+.credits {
+    text-align: center;
+    margin-top: 1rem;
 }
 
 footer {
-    background: #1f2933;
+    background: #111827;
     color: white;
-    padding: 1rem;
     text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.social a {
+    margin: 0 0.5rem;
+    color: white;
+    text-decoration: none;
 }
