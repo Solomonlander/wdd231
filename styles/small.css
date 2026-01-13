@@ -32,10 +32,13 @@ header img {
     display: none;
     list-style: none;
     background: #1f2933;
+    padding: 0;
+    margin: 0;
 }
 
 .navigation.open {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .navigation a {
@@ -77,16 +80,18 @@ main {
 #courses {
     display: grid;
     gap: 0.5rem;
+    padding: 0;
 }
 
-.course {
+#courses li {
     background: #e5e7eb;
     padding: 0.75rem;
     text-align: center;
     font-weight: bold;
+    list-style: none;
 }
 
-.course.completed {
+#courses li.completed {
     background: #bbf7d0;
     border-left: 6px solid #15803d;
 }

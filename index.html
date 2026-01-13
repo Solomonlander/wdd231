@@ -3,22 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="WDD231 Course Home Page">
+    <meta name="description" content="Course Home Page for WDD131 showcasing coursework, credits, and completed classes.">
     <meta name="author" content="Solomon Lander">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD231 | Home</title>
 
-    <!-- Google Font -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+    
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- JavaScript -->
+    
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/courses.js" defer></script>
@@ -43,7 +43,7 @@
 
     <main>
         <h1>Home</h1>
-
+    
         <!-- ABOUT ME + PHOTO -->
         <section class="about">
             <div class="about-text">
@@ -53,30 +53,38 @@
                     development and user-centered design.
                 </p>
             </div>
-
+    
             <div class="about-image">
                 <h2>Student Photo</h2>
                 <img src="images/lander2.webp" alt="Student photo">
             </div>
         </section>
-
+    
         <!-- WEB CERTIFICATE COURSES -->
         <section class="courses-section">
             <h2>Web Certificate Courses</h2>
-
+    
             <div class="filters">
-                <button onclick="filterCourses('all')">All</button>
-                <button onclick="filterCourses('CSE')">CSE</button>
-                <button onclick="filterCourses('WDD')">WDD</button>
+                <button id="allBtn">All</button>
+                <button id="cseBtn">CSE</button>
+                <button id="wddBtn">WDD</button>
             </div>
-            <div id="courses"></div>
-
+    
+            <ul id="courses"></ul>
+    
             <p class="credits">
-                The total credits for course listed above is 
+                The total credits for course listed above is
                 <span id="totalCredits"></span>
             </p>
         </section>
+    
+        <!-- EXTRA SECTION (AUDIT REQUIREMENT) -->
+        <section class="info">
+            <h2>Academic Progress</h2>
+            <p>This page displays my completed and in-progress courses for the Web Certificate.</p>
+        </section>
     </main>
+
 
     <footer>
         <div class="social">
