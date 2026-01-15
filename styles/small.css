@@ -24,8 +24,13 @@ header img {
 #menu {
     background: none;
     border: none;
+    font-size: 1.75rem;
     color: white;
-    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#menu.open {
+    transform: rotate(90deg);
 }
 
 .navigation {
@@ -42,14 +47,13 @@ header img {
 }
 
 .navigation a {
-    display: block;
     padding: 0.75rem;
     color: white;
     text-decoration: none;
 }
 
-.navigation a:hover,
-.navigation a.active {
+.navigation a.active,
+.navigation a:hover {
     background: #374151;
 }
 
@@ -62,19 +66,29 @@ main {
     gap: 1rem;
 }
 
-.about-image img {
-    background: #d1d5db;
-}
-
 .courses-section {
     margin-top: 2rem;
 }
 
-.filters {
+.filters,
+.filter {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
+}
+
+.filters button,
+.filter button {
+    padding: 0.5rem 0.75rem;
+    border: none;
+    cursor: pointer;
+}
+
+.filters button.active,
+.filter button.active {
+    background: #15803d;
+    color: white;
 }
 
 #courses {
@@ -84,16 +98,20 @@ main {
 }
 
 #courses li {
+    list-style: none;
     background: #e5e7eb;
     padding: 0.75rem;
-    text-align: center;
     font-weight: bold;
-    list-style: none;
 }
 
 #courses li.completed {
     background: #bbf7d0;
     border-left: 6px solid #15803d;
+}
+
+.done {
+    color: #166534;
+    font-weight: bold;
 }
 
 .credits {
@@ -107,10 +125,4 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
-}
-
-.social a {
-    margin: 0 0.5rem;
-    color: white;
-    text-decoration: none;
 }

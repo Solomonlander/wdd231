@@ -3,22 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Course Home Page for WDD131 showcasing coursework, credits, and completed classes.">
+    <meta name="description"
+        content="Course Home Page for WDD231 showcasing coursework, credits, and completed classes.">
     <meta name="author" content="Solomon Lander">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD231 | Home</title>
 
-    
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    
+    <!-- JS -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/courses.js" defer></script>
@@ -30,7 +31,7 @@
             <img src="images/lagos-chamber-logo.jpg" alt="Site Logo">
             <span class="site-name">Lagos Chamber of Commerce</span>
         </div>
-        <button id="menu" aria-label="Menu"></button>
+        <button id="menu" aria-label="Menu">☰</button>
     </header>
 
     <nav>
@@ -43,54 +44,60 @@
 
     <main>
         <h1>Home</h1>
-    
-        <!-- ABOUT ME + PHOTO -->
+
+        <!-- ABOUT -->
         <section class="about">
-            <div class="about-text">
+            <div>
                 <h2>About Me</h2>
                 <p>
-                    I am a Web and Computer Programming student with a strong interest in front-end
-                    development and user-centered design.
+                    I am a Web and Computer Programming student with a strong interest in
+                    front-end development and user-centered design.
                 </p>
             </div>
-    
-            <div class="about-image">
+
+            <div>
                 <h2>Student Photo</h2>
                 <img src="images/lander2.webp" alt="Student photo">
             </div>
         </section>
-    
-        <!-- WEB CERTIFICATE COURSES -->
+
+        <!-- COURSES -->
         <section class="courses-section">
             <h2>Web Certificate Courses</h2>
-    
+
+            <!-- SUBJECT FILTER -->
             <div class="filters">
-                <button id="allBtn">All</button>
+                <button id="allBtn" class="active">All</button>
                 <button id="cseBtn">CSE</button>
                 <button id="wddBtn">WDD</button>
             </div>
-    
+
+            <!-- INDIVIDUAL COURSE FILTER -->
+            <div class="filter">
+                <button id="WDD130">WDD130</button>
+                <button id="WDD131">WDD131</button>
+                <button id="WDD231">WDD231</button>
+            </div>
+
             <ul id="courses"></ul>
-    
+
             <p class="credits">
-                The total credits for course listed above is
-                <span id="totalCredits"></span>
+                Total Credits: <strong><span id="totalCredits"></span></strong>
             </p>
         </section>
-    
-        <!-- EXTRA SECTION (AUDIT REQUIREMENT) -->
+
+        <!-- EXTRA SECTION -->
         <section class="info">
             <h2>Academic Progress</h2>
             <p>This page displays my completed and in-progress courses for the Web Certificate.</p>
         </section>
     </main>
 
-
     <footer>
         <div class="social">
-            <a href="https://linkedin.com" aria-label="LinkedIn">in</a>
-            <a href="https://github.com" aria-label="GitHub">GitHub</a>
-            <a href="https://x.com/SolomonLander" aria-label="X">X</a>
+            <a href="https://linkedin.com">in</a>
+            <a href="https://github.com">GitHub</a>
+            <a href="https://x.com/SolomonLander">X</a>
         </div>
 
         <p>© <span id="year"></span> Solomon Lander | Nigeria</p>
