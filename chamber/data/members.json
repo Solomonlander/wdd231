@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Lekki Beach Hotel",
+    "address": "6 Admiralty Way, Lekki Phase 1, Lagos",
+    "phone": "+234 1 123 4567",
+    "website": "https://lekkibeachhotel.example",
+    "image": "business1.webp",
+    "level": 3,
+    "description": "Luxury hotel and beachfront services."
+  },
+  {
+    "name": "Ikeja City Mall",
+    "address": "Ikeja City Mall, Allen Avenue, Ikeja",
+    "phone": "+234 1 234 5678",
+    "website": "https://ikejacitymall.example",
+    "image": "business2.webp",
+    "level": 2,
+    "description": "Top shopping and entertainment destination."
+  },
+  {
+    "name": "Eko Atlantic Real Estate",
+    "address": "Victoria Island, Lagos",
+    "phone": "+234 1 345 6789",
+    "website": "https://ekoatlantic.example",
+    "image": "business3.webp",
+    "level": 3,
+    "description": "Premium real estate and waterfront properties."
+  },
+  {
+    "name": "Lagos Logistics Ltd.",
+    "address": "Ikeja Industrial Estate, Lagos",
+    "phone": "+234 1 456 7890",
+    "website": "https://lagoslogistics.example",
+    "image": "business4.webp",
+    "level": 1,
+    "description": "Reliable shipping and cargo services."
+  },
+  {
+    "name": "Nigerian Tech Hub",
+    "address": "Yaba, Lagos",
+    "phone": "+234 1 567 8901",
+    "website": "https://nigeriantechhub.example",
+    "image": "business5.webp",
+    "level": 2,
+    "description": "Technology and innovation community."
+  },
+  {
+    "name": "Lagos Food Market",
+    "address": "Balogun Market, Lagos Island",
+    "phone": "+234 1 678 9012",
+    "website": "https://lagosfoodmarket.example",
+    "image": "business6.webp",
+    "level": 1,
+    "description": "Fresh food and produce market."
+  },
+  {
+    "name": "Victoria Island Bank",
+    "address": "Victoria Island, Lagos",
+    "phone": "+234 1 789 0123",
+    "website": "https://vibank.example",
+    "image": "business7.webp",
+    "level": 3,
+    "description": "Banking services and financial support."
+  }
+]
