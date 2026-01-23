@@ -5,44 +5,44 @@
     "phone": "+234 1 123 4567",
     "website": "https://lekkibeachhotel.example",
     "image": "business1.webp",
-    "level": 3,
-    "description": "Luxury hotel and beachfront services."
+    "level": "Gold",
+    "description": "Luxury hotel offering beachfront accommodation, dining, and event services."
   },
   {
     "name": "Ikeja City Mall",
-    "address": "Ikeja City Mall, Allen Avenue, Ikeja",
+    "address": "Ikeja City Mall, Allen Avenue, Ikeja, Lagos",
     "phone": "+234 1 234 5678",
     "website": "https://ikejacitymall.example",
     "image": "business2.webp",
-    "level": 2,
-    "description": "Top shopping and entertainment destination."
+    "level": "Silver",
+    "description": "Major shopping and entertainment destination serving residents and visitors."
   },
   {
     "name": "Eko Atlantic Real Estate",
-    "address": "Victoria Island, Lagos",
+    "address": "Eko Atlantic City, Victoria Island, Lagos",
     "phone": "+234 1 345 6789",
     "website": "https://ekoatlantic.example",
     "image": "business3.webp",
-    "level": 3,
-    "description": "Premium real estate and waterfront properties."
+    "level": "Gold",
+    "description": "Premium real estate development offering waterfront residential and commercial properties."
   },
   {
-    "name": "Lagos Logistics Ltd.",
+    "name": "Lagos Logistics Ltd",
     "address": "Ikeja Industrial Estate, Lagos",
     "phone": "+234 1 456 7890",
     "website": "https://lagoslogistics.example",
     "image": "business4.webp",
-    "level": 1,
-    "description": "Reliable shipping and cargo services."
+    "level": "Bronze",
+    "description": "Logistics and freight services supporting domestic and international trade."
   },
   {
     "name": "Nigerian Tech Hub",
-    "address": "Yaba, Lagos",
+    "address": "Yaba Technology District, Lagos",
     "phone": "+234 1 567 8901",
     "website": "https://nigeriantechhub.example",
     "image": "business5.webp",
-    "level": 2,
-    "description": "Technology and innovation community."
+    "level": "Silver",
+    "description": "Technology and innovation hub supporting startups, developers, and entrepreneurs."
   },
   {
     "name": "Lagos Food Market",
@@ -50,8 +50,8 @@
     "phone": "+234 1 678 9012",
     "website": "https://lagosfoodmarket.example",
     "image": "business6.webp",
-    "level": 1,
-    "description": "Fresh food and produce market."
+    "level": "Bronze",
+    "description": "Open food market providing fresh produce and local goods to the community."
   },
   {
     "name": "Victoria Island Bank",
@@ -59,7 +59,7 @@
     "phone": "+234 1 789 0123",
     "website": "https://vibank.example",
     "image": "business7.webp",
-    "level": 3,
-    "description": "Banking services and financial support."
+    "level": "Gold",
+    "description": "Financial institution offering banking services and business financial support."
   }
 ]

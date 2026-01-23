@@ -2,6 +2,17 @@
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .nav-links {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
 }
 
 @media (min-width: 900px) {

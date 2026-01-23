@@ -2,58 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lagos Chamber Directory</title>
-    <meta name="description" content="Directory of Lagos Chamber of Commerce members.">
-    <meta name="author" content="Solomon Lander Emmanson">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Lagos Chamber Directory</title>
+  <meta name="description"
+    content="Directory of Lagos Chamber of Commerce members. Explore verified businesses supporting economic growth in Lagos.">
+  <meta name="author" content="Solomon Lander Emmanson">
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="Lagos Chamber Directory">
-    <meta property="og:description" content="Browse Lagos businesses in our chamber directory.">
-    <meta property="og:image" content="images/social-share.png">
-    <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- CSS Reset -->
-    <link rel="stylesheet" href="css/normalize.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/larger.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lagos Chamber Directory">
+  <meta property="og:description"
+    content="Explore trusted Lagos businesses and organizations that are members of the Lagos Chamber of Commerce.">
+  <meta property="og:image" content="images/social-share.webp">
+  <meta property="og:url" content="https://solomonlander.github.io/wdd231/chamber/directory.html">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/larger.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">Lagos Chamber</div>
-        <nav class="nav">
-            <button class="hamburger">☰</button>
-            <ul class="nav-links">
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">Lagos Chamber</div>
 
-    <main>
-        <section class="directory-controls">
-            <button id="gridBtn">Grid View</button>
-            <button id="listBtn">List View</button>
-        </section>
+    <nav>
+      <button class="hamburger" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a class="active" href="directory.html">Directory</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section id="directory" class="grid"></section>
-    </main>
+  <main>
+    <h1>Lagos Chamber of Commerce Directory</h1>
 
-    <footer>
-        <p>© <span id="copyright-year"></span> Lagos Chamber of Commerce</p>
-        <p>Solomon Lander Emmanson | WDD 231 | Last modified: <span id="last-modified"></span></p>
-    </footer>
+    <section class="directory-controls">
+      <button id="gridBtn">Grid View</button>
+      <button id="listBtn">List View</button>
+    </section>
 
-    <script src="js/directory.js"></script>
+    <section id="directory" class="grid"></section>
+  </main>
+
+  <footer>
+    <p>© <span id="copyright-year"></span> Lagos Chamber of Commerce</p>
+    <p>Solomon Lander Emmanson | WDD 231 | Last modified:
+      <span id="last-modified"></span>
+    </p>
+  </footer>
+
+  <script src="js/directory.js"></script>
 </body>
 
 </html>

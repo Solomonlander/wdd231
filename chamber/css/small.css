@@ -1,50 +1,90 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background: #f6f6f6;
+    background-color: #f6f6f6;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #0b3d91;
+    color: #ffffff;
     padding: 1rem;
-    background: #0b3d91;
-    /* Lagos blue */
-    color: #fff;
 }
 
 .logo {
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav {
+    position: relative;
+}
+
+.hamburger {
+    font-size: 1.5rem;
+    background: none;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
 }
 
 .nav-links {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    background-color: #0b3d91;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 3rem;
+}
+
+.nav-links.open {
     display: flex;
-    gap: 1rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0;
+}
+
+.nav-links a.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 1rem;
 }
 
 .directory-controls {
-    margin: 1rem;
     display: flex;
     gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #0b3d91;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
 .grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 1rem;
 }
 
 .list {
     display: block;
-    padding: 1rem;
 }
 
 .member-card {
-    background: #fff;
+    background-color: #ffffff;
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 8px;
@@ -53,5 +93,22 @@ header {
 .member-card img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 6px;
+}
+
+.list .member-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.list .member-card img {
+    width: 150px;
+}
+
+footer {
+    background-color: #0b3d91;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
 }
