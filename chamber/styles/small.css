@@ -73,27 +73,38 @@ button {
     cursor: pointer;
 }
 
+/* GRID VIEW */
 .grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
 
+/* LIST VIEW */
 .list {
     display: block;
 }
 
+/* MEMBER CARD */
 .member-card {
     background-color: #ffffff;
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 8px;
+    display: grid;
+    gap: 1rem;
 }
 
-.member-card img {
+/* IMAGE STYLING FOR GRID VIEW */
+.grid .member-card img {
     width: 100%;
     height: auto;
     border-radius: 6px;
+}
+
+/* HIDE IMAGES IN LIST VIEW */
+.list .member-card img {
+    display: none;
 }
 
 footer {

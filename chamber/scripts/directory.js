@@ -22,33 +22,31 @@ function displayMembers(members) {
         card.classList.add("member-card");
 
         card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name}">
-      <div>
-        <h2>${member.name}</h2>
-        <p>${member.address}</p>
-        <p>${member.phone}</p>
-        <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
-        <p>Membership Level: ${member.level}</p>
-        <p>${member.description}</p>
-      </div>
-    `;
+            <img src="images/${member.image}" alt="${member.name}">
+            <div>
+                <h2>${member.name}</h2>
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
+                <p>Membership Level: ${member.level}</p>
+                <p>${member.description}</p>
+            </div>
+        `;
 
         directory.appendChild(card);
     });
 }
 
+// Grid view
 gridBtn.addEventListener("click", () => {
-    directory.className = "grid";
-    directory.querySelectorAll("img").forEach(img => {
-        img.style.display = "block";
-    });
+    directory.classList.add("grid");
+    directory.classList.remove("list");
 });
 
+// List view
 listBtn.addEventListener("click", () => {
-    directory.className = "list";
-    directory.querySelectorAll("img").forEach(img => {
-        img.style.display = "none";
-    });
+    directory.classList.add("list");
+    directory.classList.remove("grid");
 });
 
 document.getElementById("last-modified").textContent = document.lastModified;
