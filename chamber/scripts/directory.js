@@ -27,21 +27,28 @@ function displayMembers(members) {
         <h2>${member.name}</h2>
         <p>${member.address}</p>
         <p>${member.phone}</p>
-        <a href="${member.website}" target="_blank">Visit Website</a>
+        <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
         <p>Membership Level: ${member.level}</p>
         <p>${member.description}</p>
       </div>
     `;
+
         directory.appendChild(card);
     });
 }
 
 gridBtn.addEventListener("click", () => {
     directory.className = "grid";
+    directory.querySelectorAll("img").forEach(img => {
+        img.style.display = "block";
+    });
 });
 
 listBtn.addEventListener("click", () => {
     directory.className = "list";
+    directory.querySelectorAll("img").forEach(img => {
+        img.style.display = "none";
+    });
 });
 
 document.getElementById("last-modified").textContent = document.lastModified;
