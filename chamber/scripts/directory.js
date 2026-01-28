@@ -22,31 +22,26 @@ function displayMembers(members) {
         card.classList.add("member-card");
 
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}">
-            <div>
-                <h2>${member.name}</h2>
-                <p>${member.address}</p>
-                <p>${member.phone}</p>
-                <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
-                <p>Membership Level: ${member.level}</p>
-                <p>${member.description}</p>
-            </div>
-        `;
-
+      <img src="images/${member.image}" alt="${member.name}">
+      <div>
+        <h2>${member.name}</h2>
+        <p>${member.address}</p>
+        <p>${member.phone}</p>
+        <a href="${member.website}" target="_blank">Visit Website</a>
+        <p>Membership Level: ${member.level}</p>
+        <p>${member.description}</p>
+      </div>
+    `;
         directory.appendChild(card);
     });
 }
 
-// Grid view
 gridBtn.addEventListener("click", () => {
-    directory.classList.add("grid");
-    directory.classList.remove("list");
+    directory.className = "grid";
 });
 
-// List view
 listBtn.addEventListener("click", () => {
-    directory.classList.add("list");
-    directory.classList.remove("grid");
+    directory.className = "list";
 });
 
 document.getElementById("last-modified").textContent = document.lastModified;

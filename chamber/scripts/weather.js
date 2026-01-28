@@ -1,41 +1,45 @@
-const apiKey = "abcd1234yourkeyhere"; // OpenWeatherMap API key
-const lat = 6.5244;
-const lon = 3.3792;
+const currentTemp = document.querySelector("#current-temp");
+const weatherDesc = document.querySelector("#weather-desc");
+const forecastDiv = document.querySelector("#forecast");
 
-const weatherURL =
-    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+const apiKey = "YOUR_API_KEY_HERE"; // ← replace with your OpenWeather API key
+const lat = 6.5244;  // Lagos latitude
+const lon = 3.3792;  // Lagos longitude
 
-async function loadWeather() {
+const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+async function getWeather() {
     try {
         const response = await fetch(weatherURL);
+        if (!response.ok) {
+            throw new Error("Weather API error");
+        }
+
         const data = await response.json();
 
-        document.getElementById("current-temp").textContent =
-            Math.round(data.list[0].main.temp);
+        // Current weather (first item)
+        currentTemp.textContent = `${Math.round(data.list[0].main.temp)}°C`;
+        weatherDesc.textContent = data.list[0].weather[0].description;
 
-        document.getElementById("weather-desc").textContent =
-            data.list[0].weather[0].description;
-
-        const forecast = document.getElementById("forecast");
-        forecast.innerHTML = "";
-
-        const days = data.list.filter(item =>
+        // 3-day forecast (every 24 hrs)
+        forecastDiv.innerHTML = "";
+        const forecastDays = data.list.filter(item =>
             item.dt_txt.includes("12:00:00")
-        );
+        ).slice(0, 3);
 
-        days.slice(0, 3).forEach(day => {
-            const date = new Date(day.dt_txt).toLocaleDateString("en-US", {
-                weekday: "short"
-            });
-
+        forecastDays.forEach(day => {
             const p = document.createElement("p");
-            p.textContent = `${date}: ${Math.round(day.main.temp)}°C`;
-            forecast.appendChild(p);
+            p.textContent = `${new Date(day.dt_txt).toLocaleDateString("en-US", {
+                weekday: "short"
+            })}: ${Math.round(day.main.temp)}°C`;
+            forecastDiv.appendChild(p);
         });
 
     } catch (error) {
-        console.error("Weather error:", error);
+        console.error(error);
+        currentTemp.textContent = "Weather unavailable";
+        weatherDesc.textContent = "";
     }
 }
 
-loadWeather();
+getWeather();

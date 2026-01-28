@@ -1,36 +1,41 @@
-const spotlightContainer = document.getElementById("spotlights");
+const spotlightContainer = document.querySelector("#spotlight-container");
+const membersURL = "data/members.json";
 
 async function loadSpotlights() {
     try {
-        const response = await fetch("data/members.json");
-        const members = await response.json();
+        const response = await fetch(membersURL);
+        if (!response.ok) {
+            throw new Error("Members data not found");
+        }
 
-        const qualified = members.filter(
-            member => member.level === "Gold" || member.level === "Silver"
+        const data = await response.json();
+
+        const qualifiedMembers = data.members.filter(member =>
+            member.membership === "Gold" || member.membership === "Silver"
         );
 
-        const randomMembers = qualified
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 3);
+        const shuffled = qualifiedMembers.sort(() => 0.5 - Math.random());
+        const selected = shuffled.slice(0, 3);
 
-        randomMembers.forEach(member => {
+        spotlightContainer.innerHTML = "";
+
+        selected.forEach(member => {
             const card = document.createElement("section");
-            card.classList.add("member-card");
+            card.classList.add("spotlight-card");
 
             card.innerHTML = `
-        <img src="images/${member.image}" alt="${member.name}">
-        <h3>${member.name}</h3>
-        <p>${member.address}</p>
-        <p>${member.phone}</p>
-        <p><strong>${member.level} Member</strong></p>
-        <a href="${member.website}" target="_blank">Visit Website</a>
-      `;
+                <h3>${member.name}</h3>
+                <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+                <p>${member.description}</p>
+                <a href="${member.website}" target="_blank">Visit Website</a>
+            `;
 
             spotlightContainer.appendChild(card);
         });
 
     } catch (error) {
-        console.error("Spotlight error:", error);
+        console.error(error);
+        spotlightContainer.textContent = "Member spotlights unavailable.";
     }
 }
 

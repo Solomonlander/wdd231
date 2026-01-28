@@ -25,10 +25,11 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <!-- JavaScript Files -->
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlights.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/footer.js"defer></script>
+    <script src="scripts/footer.js" defer></script>
 </head>
 
 <body>
@@ -85,24 +86,11 @@
     </main>
 
     <footer>
-        <p>© <span id="copyright-year"></span> Lagos Chamber of Commerce</p>
+        <p>© <span id="year"></span> Lagos Chamber of Commerce</p>
         <p>Solomon Lander Emmanson | WDD 231 | Last Modified:
-            <span id="last-modified"></span>
+            <span id="lastModified"></span>
         </p>
     </footer>
-
-    <script>
-        document.getElementById("copyright-year").textContent =
-            new Date().getFullYear();
-        document.getElementById("last-modified").textContent =
-            document.lastModified;
-
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("open");
-        });
-    </script>
 
 </body>
 

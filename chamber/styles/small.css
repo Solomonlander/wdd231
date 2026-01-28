@@ -25,8 +25,8 @@ nav {
 .hamburger {
     font-size: 1.5rem;
     background: none;
-    border: none;
     color: #ffffff;
+    border: none;
     cursor: pointer;
 }
 
@@ -34,11 +34,11 @@ nav {
     list-style: none;
     display: none;
     flex-direction: column;
+    background-color: #0b3d91;
+    padding: 1rem;
     position: absolute;
     right: 0;
     top: 3rem;
-    background-color: #0b3d91;
-    padding: 1rem;
 }
 
 .nav-links.open {
@@ -73,38 +73,37 @@ button {
     cursor: pointer;
 }
 
-/* GRID VIEW */
 .grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
 
-/* LIST VIEW */
 .list {
     display: block;
 }
 
-/* MEMBER CARD */
 .member-card {
     background-color: #ffffff;
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 8px;
-    display: grid;
-    gap: 1rem;
 }
 
-/* IMAGE STYLING FOR GRID VIEW */
-.grid .member-card img {
+.member-card img {
     width: 100%;
     height: auto;
     border-radius: 6px;
 }
 
-/* HIDE IMAGES IN LIST VIEW */
+.list .member-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
 .list .member-card img {
-    display: none;
+    width: 150px;
 }
 
 footer {
