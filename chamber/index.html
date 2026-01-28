@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Lagos Chamber of Commerce</title>
+
+    <meta name="author" content="Solomon Lander">
+    <meta name="description"
+        content="Welcome to the Lagos Chamber of Commerce — connecting businesses, supporting growth, and strengthening the Lagos economy.">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Lagos Chamber of Commerce – Home">
+    <meta property="og:description" content="Connecting businesses and building opportunities in Lagos.">
+    <meta property="og:image" content="https://solomonlander.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:url" content="https://solomonlander.github.io/wdd231/chamber/">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Lagos Chamber</div>
+
+        <nav>
+            <button class="hamburger" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <img src="images/hero.webp" alt="Lagos business district skyline">
+            <div class="hero-text">
+                <h1>Welcome to Lagos Chamber of Commerce</h1>
+                <p>Connecting businesses and building economic growth.</p>
+                <a class="cta" href="#">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- EVENTS -->
+        <section class="events">
+            <h2>Current Events</h2>
+            <ul>
+                <li>📅 Business Networking Night – Feb 10</li>
+                <li>📅 SME Growth Workshop – Feb 18</li>
+            </ul>
+        </section>
+
+        <!-- WEATHER -->
+        <section class="weather">
+            <h2>Weather</h2>
+            <p id="current-temp"></p>
+            <p id="weather-desc"></p>
+            <div id="forecast"></div>
+        </section>
+
+        <!-- SPOTLIGHTS -->
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© <span id="copyright-year"></span> Lagos Chamber of Commerce</p>
+        <p>Solomon Lander Emmanson | WDD 231 | Last Modified:
+            <span id="last-modified"></span>
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("copyright-year").textContent =
+            new Date().getFullYear();
+        document.getElementById("last-modified").textContent =
+            document.lastModified;
+
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    </script>
+
+</body>
+
+</html>
