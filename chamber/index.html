@@ -25,10 +25,9 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- JavaScript Files -->
+    <script src="scripts/navigation.js" defer></script>
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlights.js" defer></script>
-    <script src="scripts/navigation.js" defer></script>
     <script src="scripts/footer.js" defer></script>
 </head>
 
@@ -37,8 +36,8 @@
         <div class="logo">Lagos Chamber</div>
 
         <nav>
-            <button class="hamburger" aria-label="Toggle navigation">☰</button>
-            <ul class="nav-links">
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="primary-nav">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Events</a></li>
@@ -52,7 +51,8 @@
 
         <!-- HERO -->
         <section class="hero">
-            <img src="images/hero.webp" alt="Lagos business district skyline">
+            <img src="images/hero.webp" alt="Lagos business district skyline" width="1200" height="600" loading="eager">
+
             <div class="hero-text">
                 <h1>Welcome to Lagos Chamber of Commerce</h1>
                 <p>Connecting businesses and building economic growth.</p>
@@ -72,7 +72,7 @@
         <!-- WEATHER -->
         <section class="weather">
             <h2>Weather</h2>
-            <p id="current-temp"></p>
+            <p><strong>Temperature:</strong> <span id="current-temp"></span></p>
             <p id="weather-desc"></p>
             <div id="forecast"></div>
         </section>
@@ -91,7 +91,6 @@
             <span id="lastModified"></span>
         </p>
     </footer>
-
 </body>
 
 </html>
