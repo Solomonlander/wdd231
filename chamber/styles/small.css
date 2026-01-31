@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     background-color: #f6f6f6;
+    line-height: 1.6;
 }
 
 header {
@@ -23,7 +24,7 @@ nav {
 }
 
 .hamburger {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     background: none;
     color: #ffffff;
     border: none;
@@ -38,7 +39,7 @@ nav {
     padding: 1rem;
     position: absolute;
     right: 0;
-    top: 3rem;
+    top: 3.5rem;
 }
 
 .nav-links.open {
@@ -56,54 +57,43 @@ nav {
 }
 
 main {
+    max-width: 1100px;
+    margin: auto;
     padding: 1rem;
 }
 
-.directory-controls {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+.hero {
+    position: relative;
 }
 
-button {
-    background-color: #0b3d91;
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-.list {
-    display: block;
-}
-
-.member-card {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    padding: 1rem;
+.hero img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
-.member-card img {
-    width: 100%;
-    height: auto;
+.hero-text {
+    margin-top: 1rem;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #0b3d91;
+    color: #ffffff;
+    padding: 0.6rem 1rem;
     border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-.list .member-card {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+section {
+    margin-bottom: 2.5rem;
 }
 
-.list .member-card img {
-    width: 150px;
+.spotlights #spotlight-container>div {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 footer {

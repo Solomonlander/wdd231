@@ -1,22 +1,26 @@
 @media (min-width: 600px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     .nav-links {
         display: flex;
         position: static;
         flex-direction: row;
-        gap: 1rem;
+        gap: 1.2rem;
     }
 
     .hamburger {
         display: none;
     }
+
+    .spotlights #spotlight-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
 }
 
 @media (min-width: 900px) {
-    .grid {
+
+    .spotlights #spotlight-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
