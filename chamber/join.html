@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Join the Chamber | Lagos Chamber of Commerce</title>
+    <title>Join Lagos Chamber of Commerce</title>
 
     <meta name="author" content="Solomon Lander">
     <meta name="description"
-        content="Apply to join the Lagos Chamber of Commerce and gain access to networking, training, and business growth opportunities.">
+        content="Apply to join the Lagos Chamber of Commerce and gain access to networking, training, advertising, and business growth opportunities.">
+
+    <!-- Open Graph Meta Tags (REQUIRED) -->
+    <meta property="og:title" content="Join Lagos Chamber of Commerce">
+    <meta property="og:description"
+        content="Apply to join the Lagos Chamber of Commerce and access networking, training, advertising, and business growth opportunities.">
+    <meta property="og:image" content="https://solomonlander.github.io/wdd231/chamber/images/social-share.webp">
+    <meta property="og:url" content="https://solomonlander.github.io/wdd231/chamber/join.html">
 
     <link rel="icon" href="images/favicon.ico">
 
@@ -56,7 +63,7 @@
                 <label>
                     Organizational Title
                     <input type="text" name="title" title="Organizational Title" autocomplete="organization-title"
-                        pattern="[A-Za-z\\-\\s]{7,}">
+                        pattern="[A-Za-z\- ]{7,}">
                 </label>
 
                 <label>
@@ -93,7 +100,7 @@
 
                 <input type="hidden" name="timestamp" id="timestamp">
 
-                <input type="submit" value="Apply for Membership">
+                <button type="submit">Apply for Membership</button>
             </form>
         </section>
 
@@ -101,22 +108,22 @@
         <section class="membership-cards">
             <div class="membership-card animate">
                 <h2>NP Membership</h2>
-                <button onclick="npModal.showModal()">View Benefits</button>
+                <button data-modal="npModal">View Benefits</button>
             </div>
 
             <div class="membership-card animate">
                 <h2>Bronze Membership</h2>
-                <button onclick="bronzeModal.showModal()">View Benefits</button>
+                <button data-modal="bronzeModal">View Benefits</button>
             </div>
 
             <div class="membership-card animate">
                 <h2>Silver Membership</h2>
-                <button onclick="silverModal.showModal()">View Benefits</button>
+                <button data-modal="silverModal">View Benefits</button>
             </div>
 
             <div class="membership-card animate">
                 <h2>Gold Membership</h2>
-                <button onclick="goldModal.showModal()">View Benefits</button>
+                <button data-modal="goldModal">View Benefits</button>
             </div>
         </section>
     </main>
@@ -130,16 +137,23 @@
 
     <!-- MODALS -->
     <dialog id="npModal">
-        <p>No cost • Community support • Networking</p><button onclick="this.close()">Close</button>
+        <p>No cost • Community support • Networking</p>
+        <button class="close-modal">Close</button>
     </dialog>
+
     <dialog id="bronzeModal">
-        <p>Training • Events • Advertising</p><button onclick="this.close()">Close</button>
+        <p>Training • Events • Advertising</p>
+        <button class="close-modal">Close</button>
     </dialog>
+
     <dialog id="silverModal">
-        <p>Spotlights • Discounts • Premium training</p><button onclick="this.close()">Close</button>
+        <p>Spotlights • Discounts • Premium training</p>
+        <button class="close-modal">Close</button>
     </dialog>
+
     <dialog id="goldModal">
-        <p>Homepage spotlight • VIP events • Maximum exposure</p><button onclick="this.close()">Close</button>
+        <p>Homepage spotlight • VIP events • Maximum exposure</p>
+        <button class="close-modal">Close</button>
     </dialog>
 
 </body>
