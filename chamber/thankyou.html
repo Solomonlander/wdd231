@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Lagos Chamber</title>
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Lagos Chamber</div>
+    </header>
+
+    <main>
+        <h1>Thank You for Applying!</h1>
+        <div id="results"></div>
+    </main>
+
+    <footer>
+        <p>© Lagos Chamber of Commerce</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const results = document.getElementById("results");
+
+        results.innerHTML = `
+    <p><strong>Name:</strong> ${params.get("fname")} ${params.get("lname")}</p>
+    <p><strong>Email:</strong> ${params.get("email")}</p>
+    <p><strong>Phone:</strong> ${params.get("phone")}</p>
+    <p><strong>Business:</strong> ${params.get("business")}</p>
+    <p><strong>Date:</strong> ${params.get("timestamp")}</p>
+  `;
+    </script>
+
+</body>
+
+</html>
