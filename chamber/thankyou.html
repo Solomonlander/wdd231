@@ -4,24 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Lagos Chamber</title>
+    <title>Thank You | Lagos Chamber of Commerce</title>
 
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
 </head>
 
 <body>
+
     <header>
         <div class="logo">Lagos Chamber</div>
+        <nav>
+            <button class="hamburger" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <h1>Thank You for Applying!</h1>
+        <p>We have received your membership application with the following details:</p>
+
         <div id="results"></div>
     </main>
 
     <footer>
-        <p>© Lagos Chamber of Commerce</p>
+        <p>© <span id="year"></span> Lagos Chamber of Commerce</p>
+        <p>Solomon Lander Emmanson | WDD 231 | Last Modified:
+            <span id="lastModified"></span>
+        </p>
     </footer>
 
     <script>
@@ -29,12 +46,12 @@
         const results = document.getElementById("results");
 
         results.innerHTML = `
-    <p><strong>Name:</strong> ${params.get("fname")} ${params.get("lname")}</p>
-    <p><strong>Email:</strong> ${params.get("email")}</p>
-    <p><strong>Phone:</strong> ${params.get("phone")}</p>
-    <p><strong>Business:</strong> ${params.get("business")}</p>
-    <p><strong>Date:</strong> ${params.get("timestamp")}</p>
-  `;
+        <p><strong>Name:</strong> ${params.get("fname")} ${params.get("lname")}</p>
+        <p><strong>Email:</strong> ${params.get("email")}</p>
+        <p><strong>Phone:</strong> ${params.get("phone")}</p>
+        <p><strong>Business:</strong> ${params.get("business")}</p>
+        <p><strong>Date:</strong> ${params.get("timestamp")}</p>
+    `;
     </script>
 
 </body>
