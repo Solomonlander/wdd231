@@ -8,35 +8,50 @@ async function loadSpotlights() {
 
         const data = await response.json();
 
-        // Gold (3) & Silver (2) members only
+        // Gold (3) & Silver (2)
         const qualified = data.members.filter(
             member => member.level === 2 || member.level === 3
         );
 
-        // Randomize
-        qualified.sort(() => 0.5 - Math.random());
+        shuffleArray(qualified);
 
-        // Select 2–3 members
         const selected = qualified.slice(0, 3);
-
         spotlightContainer.innerHTML = "";
 
         selected.forEach(member => {
             const card = document.createElement("section");
 
-            card.innerHTML = `
-                <h3>${member.name}</h3>
-                <img src="images/${member.image}" alt="${member.name}">
-                <p>${member.description}</p>
-                <a href="${member.website}" target="_blank">Visit Website</a>
-            `;
+            const name = document.createElement("h3");
+            name.textContent = member.name;
 
+            const img = document.createElement("img");
+            img.src = `images/${member.image}`;
+            img.alt = member.name;
+            img.loading = "lazy";
+
+            const desc = document.createElement("p");
+            desc.textContent = member.description;
+
+            const link = document.createElement("a");
+            link.href = member.website;
+            link.textContent = "Visit Website";
+            link.target = "_blank";
+            link.rel = "noopener";
+
+            card.append(name, img, desc, link);
             spotlightContainer.appendChild(card);
         });
 
     } catch (error) {
         console.error("Spotlight error:", error);
         spotlightContainer.innerHTML = "<p>Member spotlights unavailable.</p>";
+    }
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
 }
 

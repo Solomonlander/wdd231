@@ -15,12 +15,23 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+        align-items: stretch;
+    }
+
+    .directory-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
 @media (min-width: 900px) {
 
     .spotlights #spotlight-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .directory-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }

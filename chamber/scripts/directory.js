@@ -2,16 +2,18 @@ const directory = document.getElementById("directory");
 const gridBtn = document.getElementById("gridBtn");
 const listBtn = document.getElementById("listBtn");
 
+const dataURL = "data/members.json";
+
 async function loadMembers() {
     try {
-        const response = await fetch("data/members.json");
+        const response = await fetch(dataURL);
         if (!response.ok) throw new Error("Failed to load members");
 
-        const members = await response.json();
-        displayMembers(members);
+        const data = await response.json();
+        displayMembers(data.members);
     } catch (error) {
+        console.error("Directory error:", error);
         directory.innerHTML = "<p>Member directory unavailable.</p>";
-        console.error(error);
     }
 }
 
@@ -19,33 +21,48 @@ function displayMembers(members) {
     directory.innerHTML = "";
 
     members.forEach(member => {
-        const card = document.createElement("section");
+        const card = document.createElement("article");
         card.classList.add("member-card");
 
-        card.innerHTML = `
-          <img src="images/${member.image}" alt="${member.name}" loading="lazy">
-          <div>
-            <h2>${member.name}</h2>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank" rel="noopener noreferrer">
-              Visit Website
-            </a>
-            <p>Membership Level: ${member.level}</p>
-            <p>${member.description}</p>
-          </div>
-        `;
+        const img = document.createElement("img");
+        img.src = `images/${member.image}`;
+        img.alt = member.name;
+        img.loading = "lazy";
 
+        const name = document.createElement("h2");
+        name.textContent = member.name;
+
+        const address = document.createElement("p");
+        address.textContent = member.address;
+
+        const phone = document.createElement("p");
+        phone.textContent = member.phone;
+
+        const link = document.createElement("a");
+        link.href = member.website;
+        link.textContent = "Visit Website";
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+
+        const level = document.createElement("p");
+        level.textContent = `Membership Level: ${member.level}`;
+
+        const desc = document.createElement("p");
+        desc.textContent = member.description;
+
+        card.append(img, name, address, phone, link, level, desc);
         directory.appendChild(card);
     });
 }
 
 gridBtn.addEventListener("click", () => {
-    directory.className = "grid";
+    directory.classList.remove("list");
+    directory.classList.add("grid");
 });
 
 listBtn.addEventListener("click", () => {
-    directory.className = "list";
+    directory.classList.remove("grid");
+    directory.classList.add("list");
 });
 
 loadMembers();
