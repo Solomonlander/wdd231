@@ -1,5 +1,7 @@
 @media (min-width: 600px) {
 
+    /* ================= NAV ================= */
+
     .nav-links {
         display: flex;
         position: static;
@@ -11,12 +13,16 @@
         display: none;
     }
 
+    /* ================= SPOTLIGHTS ================= */
+
     .spotlights #spotlight-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
         align-items: stretch;
     }
+
+    /* ================= DIRECTORY ================= */
 
     .directory-grid {
         display: grid;
@@ -25,11 +31,26 @@
     }
 }
 
+/* ================= DESKTOP LAYOUT ================= */
+
+@media (min-width: 800px) {
+
+    /* JOIN PAGE: FORM + MEMBERSHIP CARDS */
+    .join-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+}
+
 @media (min-width: 900px) {
+
+    /* ================= SPOTLIGHTS ================= */
 
     .spotlights #spotlight-container {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /* ================= DIRECTORY ================= */
 
     .directory-grid {
         grid-template-columns: repeat(3, 1fr);

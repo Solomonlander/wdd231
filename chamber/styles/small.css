@@ -136,3 +136,72 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+/* ================= JOIN FORM STYLING ================= */
+
+.join-layout {
+    display: grid;
+    gap: 2rem;
+}
+
+.join-form {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.join-form h1 {
+    margin-bottom: 1.5rem;
+}
+
+.join-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.join-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    gap: 0.4rem;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+.join-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+    outline: none;
+    border-color: #0b3d91;
+}
+
+/* ================= SUBMIT BUTTON ================= */
+
+.join-form input[type="submit"] {
+    background-color: #0b3d91;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.join-form input[type="submit"]:hover {
+    opacity: 0.9;
+}
