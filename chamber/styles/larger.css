@@ -1,15 +1,6 @@
-@media (min-width: 600px) {
+/* ================= NAV ================= */
 
-    /* ================= DISCOVER PAGE ================= */
-    
-        .discover-grid {
-            grid-template-areas:
-                "a b"
-                "c d"
-                "e f"
-                "g h";
-        }
-    /* ================= NAV ================= */
+@media (min-width: 600px) {
 
     .nav-links {
         display: flex;
@@ -22,62 +13,30 @@
         display: none;
     }
 
-    /* ================= SPOTLIGHTS ================= */
-
-    .spotlights #spotlight-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        align-items: stretch;
-    }
-
-    /* ================= DIRECTORY ================= */
-
-    .directory-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+    /* DISCOVER GRID – TABLET */
+    .discover-grid {
+        grid-template-areas:
+            "a b"
+            "c d"
+            "e f"
+            "g h";
     }
 }
 
-/* ================= DESKTOP LAYOUT ================= */
-
-@media (min-width: 800px) {
-
-    /* JOIN PAGE: FORM + MEMBERSHIP CARDS */
-    .join-layout {
-        grid-template-columns: 2fr 1fr;
-        align-items: start;
-    }
-}
+/* ================= DESKTOP ================= */
 
 @media (min-width: 900px) {
 
-    /* ================= DISCOVER PAGE ================= */
-    
-        .discover-grid {
-            grid-template-areas:
-                "a b c"
-                "d e f"
-                "g h h";
-        }
-    
-        /* Hover effect — DESKTOP ONLY */
-        .discover-card img:hover {
-            filter: brightness(1.1) contrast(1.1);
-            transform: scale(1.03);
-            transition: 0.3s ease;
-        }
-
-    /* ================= SPOTLIGHTS ================= */
-
-    .spotlights #spotlight-container {
-        grid-template-columns: repeat(3, 1fr);
+    .discover-grid {
+        grid-template-areas:
+            "a b c d"
+            "e f g h";
     }
 
-    /* ================= DIRECTORY ================= */
-
-    .directory-grid {
-        grid-template-columns: repeat(3, 1fr);
+    /* Hover effect – desktop only */
+    .discover-card img:hover {
+        transform: scale(1.03);
+        filter: brightness(1.05);
+        transition: 0.3s ease;
     }
 }
