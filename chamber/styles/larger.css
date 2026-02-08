@@ -1,5 +1,14 @@
 @media (min-width: 600px) {
 
+    /* ================= DISCOVER PAGE ================= */
+    
+        .discover-grid {
+            grid-template-areas:
+                "a b"
+                "c d"
+                "e f"
+                "g h";
+        }
     /* ================= NAV ================= */
 
     .nav-links {
@@ -43,6 +52,22 @@
 }
 
 @media (min-width: 900px) {
+
+    /* ================= DISCOVER PAGE ================= */
+    
+        .discover-grid {
+            grid-template-areas:
+                "a b c"
+                "d e f"
+                "g h h";
+        }
+    
+        /* Hover effect — DESKTOP ONLY */
+        .discover-card img:hover {
+            filter: brightness(1.1) contrast(1.1);
+            transform: scale(1.03);
+            transition: 0.3s ease;
+        }
 
     /* ================= SPOTLIGHTS ================= */
 

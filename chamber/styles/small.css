@@ -205,3 +205,139 @@ footer {
 .join-form input[type="submit"]:hover {
     opacity: 0.9;
 }
+
+/* ================= DISCOVER PAGE ================= */
+
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h";
+}
+
+.discover-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Assign grid areas */
+.discover-card:nth-child(1) {
+    grid-area: a;
+}
+
+.discover-card:nth-child(2) {
+    grid-area: b;
+}
+
+.discover-card:nth-child(3) {
+    grid-area: c;
+}
+
+.discover-card:nth-child(4) {
+    grid-area: d;
+}
+
+.discover-card:nth-child(5) {
+    grid-area: e;
+}
+
+.discover-card:nth-child(6) {
+    grid-area: f;
+}
+
+.discover-card:nth-child(7) {
+    grid-area: g;
+}
+
+.discover-card:nth-child(8) {
+    grid-area: h;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* ================= DISCOVER GRID ================= */
+
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* SMALL SCREENS */
+@media (max-width: 640px) {
+    .discover-grid {
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+    }
+}
+
+/* MEDIUM SCREENS */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}
+
+/* LARGE SCREENS */
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+}
+
+/* ================= DISCOVER CARD ================= */
+
+.discover-card {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.discover-card figure {
+    margin: 0;
+}
+
+.discover-card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* ================= DESKTOP HOVER EFFECT ONLY ================= */
+
+@media (min-width: 641px) {
+    .discover-card img:hover {
+        filter: brightness(85%) contrast(110%);
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+    }
+}
