@@ -3,18 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Discover Lagos | Chamber of Commerce</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discover Lagos | Lagos Chamber of Commerce</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- META REQUIRED -->
+    <meta name="description"
+        content="Discover Lagos attractions, culture, and business opportunities through the Lagos Chamber of Commerce.">
+    <meta name="author" content="Solomon Lander">
+
+    <!-- OPEN GRAPH META -->
+    <meta property="og:title" content="Discover Lagos | Lagos Chamber of Commerce">
+    <meta property="og:description"
+        content="Explore Lagos attractions, culture, and business highlights through the Lagos Chamber of Commerce.">
+    <meta property="og:image" content="https://solomonlander.github.io/wdd231/chamber/images/lekki.jpg">
+    <meta property="og:url" content="https://solomonlander.github.io/wdd231/chamber/discover.html">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- STYLES -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- FIXED FILE NAME -->
-    <script type="module" src="scripts/discover.js"></script>
+    <!-- SCRIPT -->
+    <script type="module" src="scripts/discover.js" defer></script>
 </head>
 
 <body>
+
     <header>
         <div class="logo">Lagos Chamber</div>
         <nav>
@@ -29,14 +52,20 @@
     </header>
 
     <main>
+        <!-- REQUIRED H1 -->
+        <h1>Discover Lagos Chamber of Commerce</h1>
+
         <section id="visit-message" class="card"></section>
 
-        <section class="discover-grid" id="discover-grid"></section>
+        <section class="discover-grid" id="discover-grid">
+            <!-- Cards injected by JavaScript -->
+        </section>
     </main>
 
     <footer>
         <p>&copy; <span id="year"></span> Lagos Chamber of Commerce</p>
     </footer>
+
 </body>
 
 </html>
