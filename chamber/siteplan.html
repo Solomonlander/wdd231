@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Plan | Hotel Management System</title>
+
     <meta name="author" content="Solomon Lander">
     <meta name="description"
         content="Project site plan for a web-based hotel management system focusing on sales, reporting, and front desk operations.">
 
     <!-- Google Font -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         /* ================= COLOR SCHEME =================
-       Primary: #0b3d91 (Headers, navigation, accents)
-       Secondary: #f6f6f6 (Page background)
-       Neutral: #ffffff (Cards / sections)
-    */
+           Primary: #0b3d91 (Headers, navigation, accents)
+           Secondary: #f6f6f6 (Page background)
+           Neutral: #ffffff (Cards / sections)
+        */
 
         body {
             font-family: 'Roboto', Arial, sans-serif;
@@ -60,16 +59,15 @@
             padding-left: 1.2rem;
         }
 
-        .wireframes {
-            display: grid;
-            gap: 1.5rem;
+        .wireframe-image {
+            text-align: center;
         }
 
-        .wireframe-box {
-            border: 2px dashed #0b3d91;
-            padding: 1rem;
-            text-align: center;
-            background-color: #fdfdfd;
+        .wireframe-image img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #0b3d91;
+            border-radius: 8px;
         }
 
         footer {
@@ -78,14 +76,7 @@
             text-align: center;
             padding: 1rem;
         }
-
-        @media (min-width: 700px) {
-            .wireframes {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
     </style>
-
 </head>
 
 <body>
@@ -97,20 +88,23 @@
 
     <main>
 
-        ```
         <section>
             <h2>Site Name</h2>
             <p><strong>Hotel Operations Management System (HOMS)</strong></p>
-            <p>This name was selected because it clearly represents a centralized system designed to manage hotel sales,
-                reporting, and front desk operations in a professional and recognizable way.</p>
+            <p>
+                This name was selected because it clearly represents a centralized system designed to manage hotel
+                sales, reporting, and front desk operations in a professional and recognizable way.
+            </p>
         </section>
 
         <section>
             <h2>Site Purpose</h2>
-            <p>The purpose of this website is to demonstrate a responsive, web-based hotel management system that
+            <p>
+                The purpose of this website is to demonstrate a responsive, web-based hotel management system that
                 supports front desk operations, sales tracking, room status monitoring, and administrative reporting.
-                The site will serve as both an academic project and a conceptual foundation for a real-world hotel
-                management application.</p>
+                The site serves as both an academic project and a conceptual foundation for a real-world hotel
+                management application.
+            </p>
         </section>
 
         <section>
@@ -120,49 +114,41 @@
                     availability?</li>
                 <li>How can hotel administrators view daily sales summaries and room occupancy reports from a single
                     dashboard?</li>
-                <li>Can the system be accessed easily on mobile devices during front desk operations?</li>
+                <li>Can the system be accessed efficiently on mobile devices during front desk operations?</li>
             </ul>
         </section>
 
         <section>
             <h2>Color Scheme</h2>
             <ul>
-                <li><strong>Primary Blue (#0b3d91):</strong> Used for headers, section titles, navigation elements, and
-                    accents.</li>
-                <li><strong>Light Gray (#f6f6f6):</strong> Used as the main page background for readability.</li>
-                <li><strong>White (#ffffff):</strong> Used for content sections and cards.</li>
+                <li><strong>Primary Blue (#0b3d91):</strong> Headers, section titles, navigation, and accents.</li>
+                <li><strong>Light Gray (#f6f6f6):</strong> Page background.</li>
+                <li><strong>White (#ffffff):</strong> Content sections and cards.</li>
             </ul>
         </section>
 
         <section>
             <h2>Typography</h2>
-            <p><strong>Roboto</strong> is used as the primary font for the entire document.</p>
+            <p><strong>Roboto</strong> is used as the primary font across the site.</p>
             <ul>
                 <li>Headings: Roboto Bold</li>
                 <li>Body text: Roboto Regular</li>
             </ul>
-            <p>This font was selected for its clarity, modern appearance, and strong readability across devices.</p>
+            <p>
+                This font was selected for its clarity, modern appearance, and excellent readability on both mobile and
+                desktop devices.
+            </p>
         </section>
 
         <section>
-            <h2>Wireframes</h2>
-            <div class="wireframes">
-                <div class="wireframe-box">
-                    <h3>Mobile View</h3>
-                    <p>Header</p>
-                    <p>Dashboard Summary</p>
-                    <p>Sales & Check-in Forms</p>
-                    <p>Reports Section</p>
-                </div>
-                <div class="wireframe-box">
-                    <h3>Desktop View</h3>
-                    <p>Top Navigation Bar</p>
-                    <p>Main Dashboard (Grid Layout)</p>
-                    <p>Sales | Rooms | Reports Panels</p>
-                </div>
-            </div>
+            <h2>Wireframe</h2>
+            <figure class="wireframe-image">
+                <img src="images/wireframe-mobile-desktop.png" alt="Home page wireframe showing mobile and desktop layouts">
+                <figcaption>
+                    Home page wireframe displaying both mobile and desktop layouts.
+                </figcaption>
+            </figure>
         </section>
-        ```
 
     </main>
 
