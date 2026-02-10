@@ -1,0 +1,9 @@
+<script>
+    const params = new URLSearchParams(window.location.search);
+    document.body.innerHTML = `
+    <h2>Form Submission</h2>
+    <p>Name: ${params.get("name")}</p>
+    <p>Email: ${params.get("email")}</p>
+    <p>Message: ${params.get("message")}</p>
+  `;
+</script>

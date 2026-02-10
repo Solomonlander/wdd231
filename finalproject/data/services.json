@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Room Booking",
+        "category": "Front Desk",
+        "price": "$120",
+        "status": "Available"
+    },
+    {
+        "name": "Check-in Service",
+        "category": "Front Desk",
+        "price": "Free",
+        "status": "Active"
+    },
+    {
+        "name": "Laundry",
+        "category": "Housekeeping",
+        "price": "$15",
+        "status": "Available"
+    },
+    {
+        "name": "Restaurant",
+        "category": "Food",
+        "price": "$30",
+        "status": "Active"
+    },
+    {
+        "name": "Spa",
+        "category": "Wellness",
+        "price": "$60",
+        "status": "Available"
+    },
+    {
+        "name": "Gym",
+        "category": "Fitness",
+        "price": "Free",
+        "status": "Active"
+    },
+    {
+        "name": "Airport Pickup",
+        "category": "Transport",
+        "price": "$50",
+        "status": "Available"
+    },
+    {
+        "name": "Conference Hall",
+        "category": "Business",
+        "price": "$200",
+        "status": "Available"
+    },
+    {
+        "name": "Room Service",
+        "category": "Food",
+        "price": "$20",
+        "status": "Active"
+    },
+    {
+        "name": "Security",
+        "category": "Support",
+        "price": "Free",
+        "status": "Active"
+    },
+    {
+        "name": "Maintenance",
+        "category": "Support",
+        "price": "Free",
+        "status": "Active"
+    },
+    {
+        "name": "Bar",
+        "category": "Food",
+        "price": "$25",
+        "status": "Available"
+    },
+    {
+        "name": "Swimming Pool",
+        "category": "Recreation",
+        "price": "Free",
+        "status": "Active"
+    },
+    {
+        "name": "Event Planning",
+        "category": "Business",
+        "price": "$150",
+        "status": "Available"
+    },
+    {
+        "name": "Tour Guide",
+        "category": "Leisure",
+        "price": "$80",
+        "status": "Available"
+    }
+]

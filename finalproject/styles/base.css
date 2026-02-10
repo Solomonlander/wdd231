@@ -1,0 +1,167 @@
+:root {
+    --primary: #0b3d91;
+    --secondary: #f6f6f6;
+    --light: #ffffff;
+    --dark: #222;
+}
+
+/* ===== GLOBAL ===== */
+body {
+    font-family: Roboto, Arial, sans-serif;
+    background-color: var(--secondary);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== HEADER & NAV ===== */
+header {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    font-size: 1.5rem;
+    background: none;
+    color: var(--light);
+    border: none;
+    cursor: pointer;
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation li a {
+    display: block;
+    padding: 0.5rem;
+    color: var(--light);
+    text-decoration: none;
+}
+
+.navigation li a.active,
+.navigation li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    padding: 1rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero p {
+    background-color: var(--light);
+    padding: 1rem;
+    border-left: 4px solid var(--primary);
+}
+
+/* ===== SERVICES ===== */
+#services {
+    display: grid;
+    gap: 1rem;
+}
+
+#services article {
+    background-color: var(--light);
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#services h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+#services button {
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#services button:hover {
+    opacity: 0.9;
+}
+
+/* ===== MODAL ===== */
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 400px;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* ===== FORM ===== */
+form {
+    background-color: var(--light);
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.2rem;
+}
+
+button[type="submit"] {
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+}

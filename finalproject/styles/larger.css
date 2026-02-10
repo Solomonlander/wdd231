@@ -1,0 +1,30 @@
+@media (min-width: 768px) {
+
+    /* NAVIGATION */
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navigation li a {
+        padding: 0.3rem 0.6rem;
+    }
+
+    /* SERVICES GRID */
+    #services {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* HERO */
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        align-items: center;
+    }
+
+}
