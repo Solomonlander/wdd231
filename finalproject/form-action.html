@@ -1,9 +1,23 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Form Submission</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <script>
     const params = new URLSearchParams(window.location.search);
+
     document.body.innerHTML = `
     <h2>Form Submission</h2>
-    <p>Name: ${params.get("name")}</p>
-    <p>Email: ${params.get("email")}</p>
-    <p>Message: ${params.get("message")}</p>
+    <p><strong>Name:</strong> ${params.get("name")}</p>
+    <p><strong>Email:</strong> ${params.get("email")}</p>
+    <p><strong>Message:</strong> ${params.get("message")}</p>
   `;
-</script>
+  </script>
+</body>
+
+</html>
