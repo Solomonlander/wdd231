@@ -5,10 +5,6 @@
     --dark: #222;
 }
 
-:root {
-    --accent: #ffeb3b;
-}
-
 /* ===== GLOBAL ===== */
 body {
     font-family: Roboto, Arial, sans-serif;
