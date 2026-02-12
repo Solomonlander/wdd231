@@ -1,4 +1,4 @@
-/* ================= NAV ================= */
+/* ================= TABLET ================= */
 
 @media (min-width: 600px) {
 
@@ -21,6 +21,21 @@
             "e f"
             "g h";
     }
+
+    /* ✅ CARD INTERNAL LAYOUT CHANGE */
+    .discover-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .discover-card img {
+        width: 40%;
+    }
+
+    .card-content {
+        width: 60%;
+    }
 }
 
 /* ================= DESKTOP ================= */
@@ -33,7 +48,17 @@
             "e f g h";
     }
 
+    /* Return to stacked layout */
+    .discover-card {
+        flex-direction: column;
+        transition: transform 0.3s ease;
+    }
+
     /* Hover effect – desktop only */
+    .discover-card:hover {
+        transform: translateY(-4px);
+    }
+
     .discover-card img:hover {
         transform: scale(1.03);
         filter: brightness(1.05);

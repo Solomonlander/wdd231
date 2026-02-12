@@ -1,5 +1,3 @@
-/* discover.mjs */
-
 export const places = [
     {
         name: "Lekki Conservation Centre",
@@ -56,7 +54,7 @@ export const places = [
 const grid = document.querySelector("#discover-grid");
 const visitMessage = document.querySelector("#visit-message");
 
-/* ================= VISIT MESSAGE (localStorage) ================= */
+/* ================= VISIT MESSAGE ================= */
 
 const lastVisit = localStorage.getItem("lastVisit");
 const now = Date.now();
@@ -76,37 +74,24 @@ if (!lastVisit) {
 
 localStorage.setItem("lastVisit", now);
 
-/* ================= BUILD DISCOVER CARDS ================= */
+/* ================= BUILD CARDS ================= */
 
 function buildCards() {
     places.forEach((place) => {
-        const card = document.createElement("section");
-        card.classList.add("discover-card");
 
-        const figure = document.createElement("figure");
+        const card = document.createElement("article");
+        card.className = "discover-card";
 
-        const img = document.createElement("img");
-        img.src = `images/${place.image}`;
-        img.alt = place.name;
-        img.loading = "lazy";
-        img.width = 300;
-        img.height = 200;
+        card.innerHTML = `
+            <img src="images/${place.image}" alt="${place.name}" loading="lazy" width="300" height="200">
 
-        const caption = document.createElement("figcaption");
-        caption.textContent = place.name;
-
-        figure.appendChild(img);
-        figure.appendChild(caption);
-
-        const address = document.createElement("p");
-        address.innerHTML = `<strong>Location:</strong> ${place.address}`;
-
-        const desc = document.createElement("p");
-        desc.textContent = place.description;
-
-        card.appendChild(figure);
-        card.appendChild(address);
-        card.appendChild(desc);
+            <div class="card-content">
+                <h3>${place.name}</h3>
+                <p class="address"><strong>Location:</strong> ${place.address}</p>
+                <p class="description">${place.description}</p>
+                <button type="button">Learn More</button>
+            </div>
+        `;
 
         grid.appendChild(card);
     });
@@ -121,7 +106,7 @@ if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
 }
 
-/* ================= HAMBURGER MENU ================= */
+/* ================= HAMBURGER ================= */
 
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");

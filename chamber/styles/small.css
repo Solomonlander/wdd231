@@ -103,12 +103,6 @@ section {
         "h";
 }
 
-.discover-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-}
-
 /* Grid areas */
 .discover-card:nth-child(1) {
     grid-area: a;
@@ -140,6 +134,33 @@ section {
 
 .discover-card:nth-child(8) {
     grid-area: h;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.discover-card button {
+    margin-top: 0.5rem;
+    padding: 0.45rem 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #0b3d91;
+    color: white;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.discover-card button:hover {
+    background-color: #222;
 }
 
 /* ================= FOOTER ================= */
