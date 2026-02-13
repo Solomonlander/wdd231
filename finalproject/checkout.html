@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guest Check-Out | HOMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/checkout.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Operations Management System</h1>
+        <nav>
+            <button id="menu">☰</button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="checkin.html">Check-In</a></li>
+                <li><a href="checkout.html" class="active">Check-Out</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Guest Check-Out</h2>
+
+        <section class="card">
+            <div id="bill-summary"></div>
+            <button id="checkout-btn">Complete Check-Out</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Solomon Lander</p>
+    </footer>
+</body>
+
+</html>

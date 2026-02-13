@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | HOMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/auth.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Operations Management System</h1>
+    </header>
+
+    <main>
+        <h2>System Login</h2>
+
+        <form id="login-form" class="card">
+            <label>
+                Username
+                <input name="username" required>
+            </label>
+
+            <label>
+                Password
+                <input type="password" name="password" required>
+            </label>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p id="login-message"></p>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Solomon Lander</p>
+    </footer>
+</body>
+
+</html>

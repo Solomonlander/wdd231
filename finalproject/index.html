@@ -8,51 +8,68 @@
     <meta name="author" content="Solomon Lander">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Hotel Operations Management System">
-<meta property="og:description"
-    content="A responsive web-based hotel management system for managing front desk operations, sales tracking, and reporting.">
-<meta property="og:image"
-    content="https://solomonlander.github.io/wdd231/finalproject/images/hero.webp">
-<meta property="og:url"
-    content="https://solomonlander.github.io/wdd231/finalproject/">
-<meta property="og:type" content="website">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hotel Operations Management System">
+    <meta property="og:description"
+        content="A responsive web-based hotel management system for managing front desk operations, sales tracking, and reporting.">
+    <meta property="og:image" content="https://solomonlander.github.io/wdd231/finalproject/images/hero.webp">
+    <meta property="og:url" content="https://solomonlander.github.io/wdd231/finalproject/">
+    <meta property="og:type" content="website">
 
-
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-
+    <!-- Styles -->
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <!-- Scripts -->
     <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/modal.js"></script>
 </head>
 
 <body>
 
     <header>
         <h1>Hotel Operations Management System</h1>
+
         <nav>
-            <button id="menu">☰</button>
+            <button id="menu" aria-label="Toggle navigation">☰</button>
             <ul class="navigation">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="checkin.html">Check-In</a></li>
+                <li><a href="checkout.html">Check-Out</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><button id="login-btn" class="login-button">Login</button></li>
             </ul>
         </nav>
     </header>
 
     <main>
+
+        <!-- HERO -->
         <section class="hero">
-            <h2 class="visually-hidden">Welcome to Hotel Operations Management System</h2>
-        
-            <img src="images/hotel.webp" alt="Hotel lobby" loading="lazy">
-            <p id="visit-message"></p>
+            <h2 class="visually-hidden">Welcome to HOMS</h2>
+
+            <img src="images/hotel.webp" alt="Modern hotel lobby interior" loading="lazy" width="800" height="500">
+
+            <div class="hero-content">
+                <p id="visit-message"> Wecome Back!</p>
+            </div>
+        </section>
+
+        <!-- ROOM AVAILABILITY PREVIEW -->
+        <section class="availability">
+            <h2>Room Availability</h2>
+            <div id="availability-preview" class="availability-grid">
+                <!-- Populated dynamically from rooms.json -->
+            </div>
         </section>
 
     </main>
@@ -61,6 +78,28 @@
         <p>&copy; <span id="year"></span> Solomon Lander</p>
         <p><a href="https://your-video-link">Project Video</a></p>
     </footer>
+
+    <!-- LOGIN MODAL -->
+    <dialog id="login-modal">
+        <form method="dialog" class="modal-form">
+            <h3>User Login</h3>
+
+            <label>
+                Username
+                <input type="text" id="username" required>
+            </label>
+
+            <label>
+                Password
+                <input type="password" id="password" required>
+            </label>
+
+            <div class="modal-actions">
+                <button value="cancel">Cancel</button>
+                <button id="submit-login" value="default">Login</button>
+            </div>
+        </form>
+    </dialog>
 
 </body>
 

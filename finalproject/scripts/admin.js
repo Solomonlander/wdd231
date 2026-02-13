@@ -1,16 +1,27 @@
-import { getGuests } from "./storage.js";
-import { getUser } from "./auth.js";
+const container = document.querySelector("#admin-rooms");
+document.querySelector("#year").textContent = new Date().getFullYear();
 
-const user = getUser();
-
-if (!user || user.role !== "admin") {
-    window.location.href = "index.html";
+function getRooms() {
+    return JSON.parse(localStorage.getItem("rooms")) || [];
 }
 
-const stats = document.querySelector("#admin-stats");
+function renderRooms() {
+    const rooms = getRooms();
+    container.innerHTML = "";
 
-const guests = getGuests();
+    rooms.forEach(room => {
+        const card = document.createElement("section");
+        card.classList.add("card");
 
-stats.innerHTML = `
-    <p>Total Guests Checked In: ${guests.length}</p>
-`;
+        card.innerHTML = `
+            <h3>Room ${room.number}</h3>
+            <p>${room.type}</p>
+            <p>₦${room.price.toLocaleString()}</p>
+            <p><strong>Status:</strong> ${room.status}</p>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+container && renderRooms();

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guest Check-In | HOMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/checkin.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Operations Management System</h1>
+        <nav>
+            <button id="menu">☰</button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="checkin.html" class="active">Check-In</a></li>
+                <li><a href="checkout.html">Check-Out</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Guest Check-In</h2>
+
+        <form id="checkin-form" class="card">
+            <label>
+                Guest Name
+                <input name="guest" required>
+            </label>
+
+            <label>
+                Select Room
+                <select id="room" name="room" required>
+                    <option value="">Choose a room</option>
+                </select>
+            </label>
+
+            <button type="submit">Check-In</button>
+        </form>
+
+        <p id="checkin-message"></p>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Solomon Lander</p>
+    </footer>
+</body>
+
+</html>
