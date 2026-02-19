@@ -1,10 +1,6 @@
-/* ===================== */
-/* LARGER SCREEN / DESKTOP */
-/* ===================== */
-
 @media (min-width: 768px) {
 
-    /* ===== NAVIGATION ===== */
+    /* NAVIGATION */
     #menu {
         display: none;
     }
@@ -18,16 +14,30 @@
         padding: 0.3rem 0.6rem;
     }
 
-    /* ===== SERVICES GRID ===== */
+    /* SERVICES GRID */
     #services {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* ===== HERO LAYOUT ===== */
+    /* HERO LAYOUT */
     .hero {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
         align-items: center;
+    }
+
+    .hero-text {
+        position: relative;
+        transform: none;
+        left: auto;
+        top: auto;
+        color: var(--light);
+        z-index: 2;
+        padding: 2rem;
+    }
+
+    .hero::before {
+        border-radius: 10px;
     }
 }
