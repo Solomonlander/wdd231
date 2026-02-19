@@ -1,14 +1,16 @@
+/* ===================== */
+/* LARGER SCREEN / DESKTOP */
+/* ===================== */
+
 @media (min-width: 768px) {
 
     /* ===== NAVIGATION ===== */
     #menu {
         display: none;
-        /* Hide mobile menu button on larger screens */
     }
 
     .navigation {
         display: flex;
-        /* Show full nav */
         gap: 1rem;
     }
 
@@ -16,49 +18,16 @@
         padding: 0.3rem 0.6rem;
     }
 
-    .main-nav ul {
-        justify-content: flex-start;
-        gap: 2rem;
-    }
-
     /* ===== SERVICES GRID ===== */
     #services {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
     }
 
-    /* ===== HERO SECTION ===== */
+    /* ===== HERO LAYOUT ===== */
     .hero {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* Image left, text right */
-        gap: 2rem;
+        gap: 1rem;
         align-items: center;
-        text-align: left;
     }
-
-    .hero-image {
-        max-height: 500px;
-        border-radius: 10px;
-    }
-
-    .hero-text {
-        position: static;
-        /* remove absolute positioning */
-        transform: none;
-        background: rgba(11, 61, 145, 0.8);
-        padding: 2rem;
-        border-radius: 10px;
-        max-width: 100%;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-text p {
-        font-size: 1.25rem;
-    }
-
 }
