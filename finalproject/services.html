@@ -4,15 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Services | HOMS</title>
-    <meta name="description" content="Hotel services managed by the Hotel Operations Management System.">
-    <meta name="author" content="Solomon Lander">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="description"
+        content="Explore hotel services including front desk management, housekeeping tracking, sales monitoring, and guest operations.">
+    <meta name="author" content="Solomon Lander">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hotel Services | HOMS">
+    <meta property="og:description"
+        content="Discover professional hotel services such as guest check-in, housekeeping tracking, and operational reporting.">
+    <meta property="og:image" content="https://solomonlander.github.io/wdd231/finalproject/images/hero.webp">
+    <meta property="og:url" content="https://solomonlander.github.io/wdd231/finalproject/services.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <!-- JS -->
     <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/modal.js"></script>
+    <script type="module" src="scripts/services.js"></script>
 </head>
 
 <body>
@@ -24,6 +46,9 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a class="active" href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="checkin.html">Check-In</a></li>
+                <li><a href="checkout.html">Check-Out</a></li>
+                <li><a href="admin.html">Admin</a></li>
             </ul>
         </nav>
     </header>
@@ -35,18 +60,45 @@
             <article>
                 <h3>Front Desk Management</h3>
                 <p>Manage guest check-ins, check-outs, and room availability.</p>
+                <button class="open-modal">View Amenities</button>
             </article>
 
             <article>
                 <h3>Housekeeping Tracking</h3>
                 <p>Track room cleaning status and staff assignments.</p>
+                <button class="open-modal">View Amenities</button>
             </article>
 
             <article>
                 <h3>Sales & Reporting</h3>
                 <p>Monitor revenue, occupancy, and generate reports.</p>
+                <button class="open-modal">View Amenities</button>
             </article>
         </section>
+
+        <!-- Modal -->
+        <dialog id="amenities-modal">
+            <h3>Room Amenities</h3>
+            <p>
+                Our rooms include high-speed Wi-Fi, air conditioning,
+                smart TV, minibar, workspace desk, and 24-hour room service.
+            </p>
+            <button id="close-modal">Close</button>
+            <button id="amenities-btn" class="card">
+                View Room Amenities
+            </button>
+
+        </dialog>
+
+        <dialog id="amenities-modal">
+            <h3>Room Amenities</h3>
+            <p>
+                Rooms include Wi-Fi, Air Conditioning,
+                Smart TV, Mini Bar, and 24-Hour Service.
+            </p>
+            <button id="close-amenities">Close</button>
+        </dialog>
+
     </main>
 
     <footer>
